@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(217, 224, 226);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding: 0;
+  margin: 0;
+  font-size: 2.5vh;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-container >h1{
+  position: absolute;
+  top:10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login{
+  display: inline-block;
+  position: absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: rgb(233, 169, 169);
+  display: flex;
+  flex-direction: column;
+  gap:3vh;
+  align-items: flex-start;
+  padding: 5vh;
+  border-radius: 5px;
+  color: rgb(78, 27, 27);
+  width: 40%;
+  height: 30%;
+  box-shadow: 15px 15px 35px -20px #080c21;
+}
+
+.login > span {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:1vw;
+}
+
+.login > span > input{
+  outline: none;
+  border-color: white;
+  background-color:rgb(217, 224, 226);
+  padding: 1vh;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.eyeIcon{
+  cursor: pointer;
+}
+
+.login > button{
+  border:none;
+  background-color:rgb(78, 27, 27);
+  color:white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 90%;
+  padding:1vh;
+}
+
+.login > button:hover{
+  background-color:rgb(100, 82, 82);
+}
+
+.header{
+  padding: 2vh;
+  padding-bottom: 3vh;
+  width: 100%;
+	font-size: 40px;
+	font-weight: 100;
+	text-align: center;
+	color: rgb(100, 82, 82);
+  opacity: 0.8;
+}
+
+.container{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap:1vw;
+  align-items: stretch;
+}
+
+.map{
+  border-radius: 20px; 
+}
+
+.CurrentWeather{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap:2vh;
+  box-shadow: 0px 15px 35px -20px #080c21;
+  width: 20vw;
+  background-color: rgb(233, 169, 169);
+  border-radius: 20px;
+  padding:3vh;
+  color:white;
+  overflow: hidden;
+}
+ 
+.CurrentWeather > div:nth-child(1), div:nth-child(6){
+  font-size: 5vh;
+}
+
+.CurrentWeather > div:nth-child(3), div:nth-child(4), div:nth-child(8), div:nth-child(9), div:nth-child(10){
+  font-size: 2vh;
+}
+.CurrentWeather > div:nth-child(5) >img{
+  width: 15vh;
+  height: 15vh;
+}
+
+#loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+}
+
+.leaflet-tooltip.no-background {
+  background:transparent;
+  border:none;
+  box-shadow:none;
+  color:black;
+  font-size: 1.5vh;
+}
+
+.popup{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.popup>img{
+  width: 8vh;
+  height: 8vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.popup>span{
+  font-size: 2vh;
+}
+
+@media only screen and (max-width: 800px) {
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:space-around;
+    gap:10vh;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .CurrentWeather{
+    width: 70%;
+  }
+
+  .CurrentWeather > div:nth-child(1){
+    font-size: 5vw;
+  }
+  
+  .CurrentWeather > div {
+    font-size: 3vw !important;
+  }
+  .CurrentWeather > div:nth-child(5) >img{
+    width: 15vw;
+    height: 15vw;
   }
 }
