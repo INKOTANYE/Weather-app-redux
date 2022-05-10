@@ -48,7 +48,7 @@ const handleEyeClick = () => {
             <span className='eyeIcon' onClick={handleEyeClick}> {!input ? <AiFillEye/> : (show ? <AiFillEyeInvisible/> : <AiFillEye/> )}</span>
           </span> 
           <button onClick = {goToHomePage}>Login</button>
-               {control && <div>The key is not correct. Please try again...</div>}           
+          <span>{control && <div>The key is not correct. Please try again...</div>} </span>          
         </form>  
     </div>
   )
