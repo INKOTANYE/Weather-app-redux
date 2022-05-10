@@ -28,12 +28,11 @@ export const citiesSlice = createSlice({
             state.item.name = data.name
             state.item.detail = data.detail   
             state.item.lat = data.lat
-            state.item.lon =  data.lon    
+            state.item.lon =  data.lon   
         },
         setKey: (state, action) => {
             state.key = action.payload  
         },
-
     },
 
     extraReducers:{
