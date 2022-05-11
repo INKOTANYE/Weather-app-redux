@@ -83,8 +83,7 @@ body {
 .container{
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
-  gap:1vw;
+  justify-content: space-evenly;
   align-items: stretch;
 }
 
@@ -108,12 +107,13 @@ body {
 }
  
 .CurrentWeather > div:nth-child(1), div:nth-child(6){
-  font-size: 5vh;
+  font-size: 6vh;
 }
 
-.CurrentWeather > div:nth-child(3), div:nth-child(4), div:nth-child(8), div:nth-child(9), div:nth-child(10){
-  font-size: 2vh;
+.CurrentWeather > div:nth-child(2), div:nth-child(7){
+  font-size: 4vh;
 }
+
 .CurrentWeather > div:nth-child(5) >img{
   width: 15vh;
   height: 15vh;
@@ -161,16 +161,20 @@ body {
   .CurrentWeather{
     width: 70%;
   }
+  .CurrentWeather > div {
+    font-size: 4vw !important;
+  }
 
-  .CurrentWeather > div:nth-child(1){
-    font-size: 5vw;
+  .CurrentWeather > div:nth-child(1), div:nth-child(6){
+    font-size: 8vw !important;
+  }
+
+  .CurrentWeather > div:nth-child(2), div:nth-child(7){
+    font-size: 6vw !important;
   }
   
-  .CurrentWeather > div {
-    font-size: 3vw !important;
-  }
   .CurrentWeather > div:nth-child(5) >img{
-    width: 15vw;
-    height: 15vw;
+    width: 25vw !important;
+    height: 25vw !important;
   }
 }

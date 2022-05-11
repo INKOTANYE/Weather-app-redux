@@ -1,4 +1,4 @@
-import { MapContainer, GeoJSON, Marker, Popup, useMapEvents} from 'react-leaflet'
+import { MapContainer, GeoJSON, Marker, Popup} from 'react-leaflet'
 import React, { useEffect, useState } from 'react'
 import cities from "../redux/data/cities.json"
 import "leaflet/dist/leaflet.css"
@@ -97,7 +97,7 @@ function Map() {
     <div>
         <MapContainer 
                 className="map"
-                style={{ width:"70vw", height:"70vh", backgroundColor:"rgb(217, 224, 226)" }} 
+                style={{ width:"70vw", height:"80vh", backgroundColor:"rgb(217, 224, 226)" }} 
                 zoom={1} 
                 scrollWheelZoom={true}
                 minZoom={6}
