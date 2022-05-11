@@ -5,6 +5,10 @@ import {MdWaterDrop} from "react-icons/md"
 import {BiWind} from "react-icons/bi"
 import {GrDebian} from "react-icons/gr"
 import {ImFire} from "react-icons/im"
+import {BsCalendar2Date} from "react-icons/bs"
+import {AiOutlineClockCircle} from "react-icons/ai"
+import {MdLocationCity} from "react-icons/md"
+import {BsInfoCircle} from "react-icons/bs"
 
 function CurrentWeather() {
     const city = useSelector((state) => state.cities.item.name)
@@ -35,16 +39,16 @@ function CurrentWeather() {
 
   return (
     <div className='CurrentWeather'>
-        <div><MdLocationOn/> {city}</div> 
-        <div>{detail}</div>
-        <div> {new Date(date*1000).toDateString()}</div>
-        <div> {new Date(date*1000).toLocaleTimeString()}</div>
-        <div>{<img src ={icon ?`http://openweathermap.org/img/w/${icon}.png` : ""} alt="wthr img" />}</div>
-        <div><ImFire/> {(temp - 273.15).toFixed(0)}&deg;</div>
-        <div>{weather.toUpperCase()}</div>
-        <div><MdWaterDrop/> {humidity} %</div>
-        <div><BiWind/> {wind} km/h</div>
-        <div><GrDebian/> {pressure} hPa</div>  
+        <div><MdLocationOn className='icon'/> {city}</div> 
+        <div><MdLocationCity className='icon'/> {detail}</div>
+        <div> <BsCalendar2Date className='icon'/> {new Date(date*1000).toDateString()}</div>
+        <div> <AiOutlineClockCircle className='icon'/> {new Date(date*1000).toLocaleTimeString()}</div>
+        <div><img src ={icon ?`http://openweathermap.org/img/w/${icon}.png` : ""} alt="wthr img" /></div>
+        <div><ImFire className='icon'/> {(temp - 273.15).toFixed(0)}&deg;</div>
+        <div><BsInfoCircle className='icon'/> {weather.toUpperCase()}</div>
+        <div><MdWaterDrop className='icon'/> {humidity} %</div>
+        <div><BiWind className='icon'/> {wind} km/h</div>
+        <div><GrDebian className='icon'/> {pressure} hPa</div>  
     </div>
   )
 }
