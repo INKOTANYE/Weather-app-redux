@@ -18,6 +18,8 @@ function CurrentWeather() {
     const date = useSelector((state) => state.cities.item.date)
     const isLoading = useSelector((state) => state.cities.isLoading)
     const error = useSelector((state) => state.cities.error)
+    const lat = useSelector((state) => state.cities.item.lat)
+    const lon = useSelector((state) => state.cities.item.lon)
 
     if (isLoading) {
         return <div className='CurrentWeather' id="loading" >Loading...</div>;
@@ -25,6 +27,10 @@ function CurrentWeather() {
     
     if (error) {
         return <div className='CurrentWeather' id="loading">{error}</div>;
+    }
+        
+    if (lat===null && lon===null) {
+      return <div className='CurrentWeather' id="loading"> Please allow to access your location or select a location on the map...</div>
     }
 
   return (

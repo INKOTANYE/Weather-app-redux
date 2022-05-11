@@ -107,11 +107,11 @@ body {
 }
  
 .CurrentWeather > div:nth-child(1), div:nth-child(6){
-  font-size: 6vh;
+  font-size: 5vh;
 }
 
 .CurrentWeather > div:nth-child(2), div:nth-child(7){
-  font-size: 4vh;
+  font-size: 3vh;
 }
 
 .CurrentWeather > div:nth-child(5) >img{
@@ -166,11 +166,11 @@ body {
   }
 
   .CurrentWeather > div:nth-child(1), div:nth-child(6){
-    font-size: 8vw !important;
+    font-size: 7vw !important;
   }
 
   .CurrentWeather > div:nth-child(2), div:nth-child(7){
-    font-size: 6vw !important;
+    font-size: 5vw !important;
   }
   
   .CurrentWeather > div:nth-child(5) >img{
