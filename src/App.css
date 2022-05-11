@@ -165,6 +165,7 @@ body {
 
   .CurrentWeather{
     width: 70%;
+    padding: 8vw !important;
   }
   .CurrentWeather > div {
     font-size: 3vw !important;
