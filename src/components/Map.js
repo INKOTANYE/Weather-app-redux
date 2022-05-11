@@ -73,7 +73,7 @@ function Map() {
         layer.on({
             mouseover: (e) => {            
                 e.target.setStyle({
-                    fillColor:"blue",
+                    fillColor:"white",
                     fillOpacity:0.2,                      
                     weight: 4,
                 })   
